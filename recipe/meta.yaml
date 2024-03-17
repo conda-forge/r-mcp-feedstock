@@ -1,4 +1,4 @@
-{% set version = '0.3.3' %}
+{% set version = "0.3.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mcp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mcp/mcp_{{ version }}.tar.gz
-  sha256: aef148c5e784480846cc243453d86cc9d2e368a182f2f02feb3bb3108cf029b0
+  sha256: 074f86438e828b7deccf0f32a3e6d5229348bbe44509e407ab33514e4e8242ed
 
 build:
-  merge_build_host: True               # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -71,14 +71,9 @@ test:
 about:
   home: https://lindeloev.github.io/mcp/
   license: GPL-2.0-only
-  summary: "Flexible and informed regression with Multiple Change Points. 'mcp' can infer change
-    points in means, variances, autocorrelation structure, and any combination of these,
-    as well as the parameters of the segments in between. All parameters are estimated
-    with uncertainty and prediction intervals are supported - also near the change points.
-    'mcp' supports hypothesis testing via Savage-Dickey density ratio, posterior contrasts,
-    and cross-validation. 'mcp' is described in Lindel\xF8v (submitted) <doi:10.31219/osf.io/fzqxv>
-    and generalizes the approach described in Carlin, Gelfand, & Smith (1992) <doi:10.2307/2347570>
-    and Stephens (1994) <doi:10.2307/2986119>."
+  summary: "Flexible and informed regression with Multiple Change Points. 'mcp' can infer change points in means, variances, autocorrelation structure, and any combination of these, as well as the parameters of the segments in between. All parameters are estimated with uncertainty and prediction intervals are supported -
+    also near the change points. 'mcp' supports hypothesis testing via Savage-Dickey density ratio, posterior contrasts, and cross-validation. 'mcp' is described in Lindeløv (submitted) <doi:10.31219/osf.io/fzqxv> and generalizes the approach described in Carlin, Gelfand, & Smith (1992) <doi:10.2307/2347570> and Stephens
+    (1994) <doi:10.2307/2986119>."
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
