@@ -1,4 +1,4 @@
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mcp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mcp/mcp_{{ version }}.tar.gz
-  sha256: 074f86438e828b7deccf0f32a3e6d5229348bbe44509e407ab33514e4e8242ed
+  sha256: e02724e2689d3ab52b85e89919c51d05088f358ace12e40e2b56ec432a94d9af
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
